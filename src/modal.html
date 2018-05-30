@@ -37,8 +37,6 @@
             display: block;
             max-height: 90vh;
             max-width: 90vw;
-            /*width: 80%;*/
-            /*max-width: 700px;*/
         }
 
         @-webkit-keyframes zoom {
@@ -70,11 +68,11 @@
         }
 
         /* 100% Image Width on Smaller Screens */
-        @media only screen and (max-width: 700px){
-            .modal-content {
-                width: 100%;
-            }
-        }
+        /*@media only screen and (max-width: 700px){*/
+            /*.modal-content {*/
+                /*width: 100%;*/
+            /*}*/
+        /*}*/
     </style>
 </head>
 <body>
@@ -83,11 +81,11 @@
 <p>In this example, we use CSS to create a modal (dialog box) that is hidden by default.</p>
 <p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p>
 
-<img class="thumbnail" id="myImg" src="../assets/pic1200_1600.jpeg" alt="Trolltunga, Norway">
+<img class="thumbnail" src="../assets/pic1200_1600.jpeg" alt="Trolltunga, Norway">
 <img class="thumbnail" src="../assets/pic1600_1200.jpeg" alt="Trolltunga, Norway">
 <img class="thumbnail" src="../assets/key5299_3459.jpg" alt="Trolltunga, Norway">
 <img class="thumbnail" src="../assets/jump4000_6000.jpeg" alt="Trolltunga, Norway">
-<img class="thumbnail" src="../assets/jump6000_4000.jpg" alt="Trolltunga, Norway">
+<img id="myImg" class="thumbnail" src="../assets/jump6000_4000.jpg" alt="Trolltunga, Norway">
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
