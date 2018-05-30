@@ -35,8 +35,28 @@
         .modal-content {
             margin: auto;
             display: block;
-            max-height: 90vh;
+            max-height: 85vh;
             max-width: 90vw;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 80vw;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 5vh;
+        }
+
+        /* Add Animation */
+        .modal-content, #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
         }
 
         @-webkit-keyframes zoom {
@@ -84,13 +104,14 @@
 <img class="thumbnail" src="../assets/pic1200_1600.jpeg" alt="Trolltunga, Norway">
 <img class="thumbnail" src="../assets/pic1600_1200.jpeg" alt="Trolltunga, Norway">
 <img class="thumbnail" src="../assets/key5299_3459.jpg" alt="Trolltunga, Norway">
-<img class="thumbnail" src="../assets/jump4000_6000.jpeg" alt="Trolltunga, Norway">
-<img id="myImg" class="thumbnail" src="../assets/jump6000_4000.jpg" alt="Trolltunga, Norway">
+<img id="myImg" class="thumbnail" src="../assets/jump4000_6000.jpeg" alt="Trolltunga, Norway">
+<img class="thumbnail" src="../assets/jump6000_4000.jpg" alt="Trolltunga, Norway">
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="img01">
+    <div id="caption"></div>
 </div>
 
 <script>
@@ -100,6 +121,7 @@
     // Get the image and insert it inside the modal - use its "alt" text as a caption
     var img = document.getElementById('myImg');
     var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
     img.onclick = function(){
         modal.style.display = "block";
         modalImg.src = this.src;
