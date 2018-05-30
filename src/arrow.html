@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+
+    <style>
+        .container {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            align-items: center;
+            width: 90%;
+            height: 90vh;
+        }
+
+        .container i {
+            padding: 20px;
+            display: block;
+            font-size: 100px;
+            transition: all 0.4s ease;
+        }
+
+        .container i:hover {
+            transform: rotateZ(90deg);
+        }
+
+        /**/
+
+        .rotate{
+            -moz-transition: all 2s linear;
+            -webkit-transition: all 2s linear;
+            transition: all 2s linear;
+        }
+
+        .rotate.down{
+            -ms-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+    </style>
+
+    <script>
+        $(".rotate").click(function(){
+            console.log('clicked');
+            $(this).toggleClass("down");
+        });
+    </script>
+
+</head>
+<body>
+
+<div class="container">
+    <i class="fa fa-angle-right"></i>
+</div>
+
+<i class="fa fa-angle-down"></i>
+
+<div class="rotate">rotate classed</div>
+
+</body>
+</html>
